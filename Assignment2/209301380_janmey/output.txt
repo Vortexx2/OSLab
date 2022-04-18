@@ -1,0 +1,14 @@
+Mon Feb  7 19:14:19 IST 2022
+A.py
+a.c
+a.out
+a.py
+b.c
+c.c
+file.txt
+firstDir
+output
+output.txt
+secDir
+try.txt
+/home/vortexx/Janmey/Academics/Sem4/OSLab/Assignment2/209301380_janmey

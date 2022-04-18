@@ -1,0 +1,11 @@
+.
+..
+a.out
+disp.c
+ex.txt
+ex2.txt
+ex3.txt
+example
+file1.c
+search.c
+sort.c

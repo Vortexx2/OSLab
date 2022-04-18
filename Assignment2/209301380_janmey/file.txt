@@ -1,0 +1,2 @@
+All of the contents written here will be written to a new textfile which is passed as the redirected file.
+This text is treated as a block with new lines and formatting as specified.
