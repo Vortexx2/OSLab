@@ -19,10 +19,9 @@ void *readerProc(void *rno) {
   pthread_mutex_lock(&mLock);
   numreader++;
 
-  if (numreader == 1)
-    sem_wait(
-        &wrt);  // if this is the first reader, it will block the first writer
-
+  // if this is the first reader, it will block the first writer
+  if (numreader == 1) sem_wait(&wrt);
+  
   pthread_mutex_unlock(&mLock);
 
   // Section where reading is done
@@ -49,8 +48,9 @@ int main() {
 
   for (int i = 0; i < readLen; i++)
     pthread_create(&read[i], NULL, readerProc, (void *)&a[i]);
-  
-  for (int i = 0; i < writeLen; i++) pthread_create(&write[i], NULL, writerProc, (void *)&a[i]);
+
+  for (int i = 0; i < writeLen; i++)
+    pthread_create(&write[i], NULL, writerProc, (void *)&a[i]);
 
   pthread_mutex_destroy(&mLock);
   sem_destroy(&wrt);
